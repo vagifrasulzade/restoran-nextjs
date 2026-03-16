@@ -1,0 +1,74 @@
+{
+	"navbar": {
+		"select_language": "Dili sec",
+		"book_now": "Indi rezerv et",
+		"menu": {
+			"restoran": {
+				"title": "Restoran",
+				"href": "/#restoran"
+			},
+			"github_users": {
+				"title": "GitHub Istifadecileri",
+				"href": "/users"
+			},
+			"locations": {
+				"title": "Mekanlar",
+				"href": "/#locations"
+			},
+			"gift_cards": {
+				"title": "Hediyye kartlari",
+				"href": "/#gift-cards"
+			},
+			"order_catering": {
+				"title": "Ketrinq sifarisi",
+				"href": "/#catering"
+			}
+		},
+		"languages": {
+			"en": "Ingilis",
+			"az": "Azerbaycan"
+		}
+	},
+	"hero": {
+		"cards": {
+			"order_online": "Onlayn sifaris",
+			"private_event": "Xususi tedbir",
+			"happy_hours": "Endirim saatlari",
+			"weekend_brunch": "Heftenin sonu brunch"
+		},
+		"menu_label": "MENU",
+		"title_prefix": "Xos gelmisiniz",
+		"title_brand": "The Grill House",
+		"description": "Seherin en yaxsi grill metbexini kesf edin. Masanizi rezerv edin ve ya onlayn sifaris verin.",
+		"book_now": "Indi rezerv et",
+		"view_restaurants": "Restoranlara bax"
+	},
+	"github": {
+		"title": "GitHub Istifadecileri",
+		"description": "Username ile GitHub istifadecilerini axtarin ve kartdan detay sehifesini acin.",
+		"search_placeholder": "Meselen: octocat",
+		"search_button": "Axtar",
+		"search_result": "Axtaris: {query}. Netice sayi: {count}.",
+		"empty_result": "Netice tapilmadi. Basqa username ile yoxlayin.",
+		"back_to_users": "Istifadecilere qayit",
+		"biography": "Bioqrafiya",
+		"bio_empty": "Bu istifadeci bio elave etmeyib.",
+		"followers": "Izleyici",
+		"following": "Izledikleri",
+		"public_repos": "Acig repolar"
+	},
+	"restoran": {
+		"title_prefix": "Restoran",
+		"title_suffix": "lar",
+		"total_found": "Cemi {count} restoran tapildi",
+		"parking_yes": "Parking movcuddur",
+		"parking_no": "Parking yoxdur",
+		"location": "Unvan"
+	},
+	"menu_section": {
+		"brand": "The Grill House",
+		"title": "Popular Menyu",
+		"subtitle": "Burger ve fries kateqoriyasindan en cox secilenler.",
+		"back_to_menu": "Menyuya qayit"
+	}
+}

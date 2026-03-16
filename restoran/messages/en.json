@@ -1,0 +1,74 @@
+{
+	"navbar": {
+		"select_language": "Select language",
+		"book_now": "Book now",
+		"menu": {
+			"restoran": {
+				"title": "Restoran",
+				"href": "/#restoran"
+			},
+			"github_users": {
+				"title": "GitHub Users",
+				"href": "/users"
+			},
+			"locations": {
+				"title": "Locations",
+				"href": "/#locations"
+			},
+			"gift_cards": {
+				"title": "Gift cards",
+				"href": "/#gift-cards"
+			},
+			"order_catering": {
+				"title": "Order catering",
+				"href": "/#catering"
+			}
+		},
+		"languages": {
+			"en": "English",
+			"az": "Azerbaijani"
+		}
+	},
+	"hero": {
+		"cards": {
+			"order_online": "Order online",
+			"private_event": "Private event",
+			"happy_hours": "Happy hours",
+			"weekend_brunch": "Weekend brunch"
+		},
+		"menu_label": "MENU",
+		"title_prefix": "Welcome to",
+		"title_brand": "The Grill House",
+		"description": "Experience the finest grilled cuisine in town. Book your table or order online today.",
+		"book_now": "Book now",
+		"view_restaurants": "View Restaurants"
+	},
+	"github": {
+		"title": "GitHub Users",
+		"description": "Search GitHub users by username and open the detail page from each card.",
+		"search_placeholder": "For example: octocat",
+		"search_button": "Search",
+		"search_result": "Search: {query}. Result count: {count}.",
+		"empty_result": "No results found. Try another username.",
+		"back_to_users": "Back to users",
+		"biography": "Biography",
+		"bio_empty": "This user has not added a bio.",
+		"followers": "Followers",
+		"following": "Following",
+		"public_repos": "Public repos"
+	},
+	"restoran": {
+		"title_prefix": "Restoran",
+		"title_suffix": "s",
+		"total_found": "Total {count} restaurants found",
+		"parking_yes": "Parking available",
+		"parking_no": "No parking",
+		"location": "Location"
+	},
+	"menu_section": {
+		"brand": "The Grill House",
+		"title": "Popular Menu",
+		"subtitle": "Top picks from our burger and fries lineup.",
+		"back_to_menu": "Back to menu"
+	}
+}

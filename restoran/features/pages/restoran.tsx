@@ -6,6 +6,8 @@ export interface Restaurant {
   parkingLot: boolean;
 }
 
+import { getTranslations } from "next-intl/server";
+
 async function getRestaurants(): Promise<Restaurant[]> {
   const res = await fetch("https://fakerestaurantapi.runasp.net/api/Restaurant", {
     cache: "no-store", // SSR - always fresh
@@ -19,16 +21,17 @@ async function getRestaurants(): Promise<Restaurant[]> {
 }
 
 export default async function Restoran() {
+  const t = await getTranslations("restoran");
   const restaurants = await getRestaurants();
 
   return (
     <section id="restoran" className="bg-zinc-950 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">
-          Restoran<span className="text-red-500">lar</span>
+          {t("title_prefix")}<span className="text-red-500">{t("title_suffix")}</span>
         </h2>
         <p className="text-white/50 mb-10 text-sm">
-          Cəmi {restaurants.length} restoran tapıldı
+          {t("total_found", { count: restaurants.length })}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -68,6 +71,7 @@ export default async function Restoran() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
+                <span className="sr-only">{t("location")}</span>
                 {restaurant.address}
               </p>
 
@@ -80,7 +84,7 @@ export default async function Restoran() {
                       : "bg-zinc-800 text-zinc-500"
                   }`}
                 >
-                  {restaurant.parkingLot ? "Parking mövcuddur" : "Parking yoxdur"}
+                  {restaurant.parkingLot ? t("parking_yes") : t("parking_no")}
                 </span>
                 <span className="text-white/30 text-xs">#{restaurant.restaurantID}</span>
               </div>
