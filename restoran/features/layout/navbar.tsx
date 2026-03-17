@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { signOut, useSession } from "next-auth/react";
 
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import { NAV_MENU_HREFS, NAV_MENU_KEYS } from "@/lib/nav-menu";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const { data: session } = useSession();
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur border-b border-white/10">
@@ -34,6 +36,39 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
+          {session?.user ? (
+            <>
+              <Link
+                href="/profile"
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              >
+                {t("profile")}
+              </Link>
+              <button
+                type="button"
+                onClick={() => signOut({ callbackUrl: "/login" })}
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              >
+                {t("logout")}
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              >
+                {t("login")}
+              </Link>
+              <Link
+                href="/register"
+                className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              >
+                {t("register")}
+              </Link>
+            </>
+          )}
+
           <LanguageSwitcher />
 
           {/* CTA Button */}

@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 import Navbar from "@/features/layout/navbar";
+import Providers from "@/components/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,10 +38,12 @@ async function RootLayoutContent({ children }: { children: React.ReactNode }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          {children}
-        </NextIntlClientProvider>
+        <Providers>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navbar />
+            {children}
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

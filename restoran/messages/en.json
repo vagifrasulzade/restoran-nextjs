@@ -1,6 +1,10 @@
 {
 	"navbar": {
 		"select_language": "Select language",
+		"login": "Login",
+		"register": "Register",
+		"profile": "Profile",
+		"logout": "Logout",
 		"book_now": "Book now",
 		"menu": {
 			"restoran": {

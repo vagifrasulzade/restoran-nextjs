@@ -1,6 +1,10 @@
 {
 	"navbar": {
 		"select_language": "Dili sec",
+		"login": "Giris",
+		"register": "Qeydiyyat",
+		"profile": "Profil",
+		"logout": "Cixis",
 		"book_now": "Indi rezerv et",
 		"menu": {
 			"restoran": {
